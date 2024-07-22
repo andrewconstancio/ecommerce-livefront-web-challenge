@@ -1,8 +1,14 @@
-# React + Vite
+# Fake Store Livefront Web Coding Challenge 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is aa fully responsive ecommerce website built with React and CSS. The website uses the Fake Store API tp fetch and display products.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation and Setup
+1. Clone the repository to your local machine.
+2. Navigate to the project directory and run `npm install` to install all dependencies.
+3. Run `npm start` to start the application.
+4. Open `http://localhost:5173/` in your browser to view the website.
+
+
+Thanks,
+Andrew

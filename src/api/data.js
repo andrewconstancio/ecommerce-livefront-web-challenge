@@ -1,10 +1,8 @@
-/**
- * 
- * 
- */
+const FAKE_STORE_URL = "https://fakestoreapi.com";
+
 export async function getAllProducts() {
 	try {
-		const response = await fetch("https://fakestoreapi.com/products");
+		const response = await fetch(`${FAKE_STORE_URL}/products`);
 
 		if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -19,7 +17,7 @@ export async function getAllProducts() {
 
 export async function getProductById(id) {
 	try {
-		const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+		const response = await fetch(`${FAKE_STORE_URL}/products/${id}`);
 		
 		if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -34,7 +32,7 @@ export async function getProductById(id) {
 
 export async function getProductsByCategoryName(name) {
 	try {
-		const response = await fetch(`https://fakestoreapi.com/products/category/${name}`);
+		const response = await fetch(`${FAKE_STORE_URL}/products/category/${name}`);
 		
 		if (!response.ok) {
             throw new Error('Network response was not ok');

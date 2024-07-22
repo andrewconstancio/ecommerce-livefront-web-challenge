@@ -279,7 +279,8 @@ body {
   font-weight: bold;
 }
 
-.content-section .content-product-section .product-item .product-item-pricing {
+.content-section .content-product-section .product-item .product-item-pricing,
+.content-section-product-details .product-details-section .product-details-information .product-details-price {
   margin-top: 1rem;
   margin-bottom: 1rem; 
   font-size: 1.5rem;
