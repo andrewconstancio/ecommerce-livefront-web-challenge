@@ -14,6 +14,7 @@ const MobileNavBar = () => {
   // state variable to show / hide the navigation menu
 	const [showMenu, setShowMenu] = useState(false);
 
+	 // toggle show menu state variable
 	const toggleMenu = () => {
 		setShowMenu((prev) => !prev);
 	};

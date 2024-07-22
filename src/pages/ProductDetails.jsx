@@ -111,11 +111,11 @@ const ProductDetails = () => {
 					{product && product.price ? (
 						<span 
 							className="product-details-price"
-							aria-label={`Product description ${product.price.toFixed(2)}`}>
+							aria-label={`Product price ${product.price.toFixed(2)}`}>
 							$ {product.price.toFixed(2)}
 						</span>
 					) : (
-						<Skeleton className="product-details-description" />
+						<Skeleton className="product-details-price" />
 					)}
 
           {/* product add to cart section */}
