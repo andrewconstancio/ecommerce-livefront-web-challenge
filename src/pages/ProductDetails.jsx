@@ -1,28 +1,26 @@
 import React from "react";
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getProductById } from "../data";
-import { FaMinus, FaPlus } from "react-icons/fa";
+import { getProductById } from "../api/data";
 import AddToCartSection from '../components/AddToCartSection';
-import ErrorPage from "../ErrorPage";
-import Skeleton from 'react-loading-skeleton'
-import 'react-loading-skeleton/dist/skeleton.css'
+import ErrorPage from "../pages/ErrorPage";
+import Skeleton from 'react-loading-skeleton';
 
 const ProductDetails = () => {
 
 	// product id url param
 	const { id } = useParams();
 
-	// product fetched from API by id
+	// get product fetched by id form the API and store it into a state variable
 	const [product, setProduct] = useState(null);
 
-	// API error
+	// state variable for when an errors occures when fetching data from the API
 	const [error, setError] = useState(null);
 
-	// product added to cart counter
+	// product added to cart counter state variable
 	const [productAddedCount, setProductAddedCount] = useState(0);
 
-	// fetch product details on component render
+  // fetch get product by id whenever this conponent renders. products state, loading state, and error state are set here
 	useEffect(() => {
 		async function fetchProduct() {
 			try {
@@ -39,24 +37,29 @@ const ProductDetails = () => {
 		  fetchProduct();
 	}, [id]);
 
+  // subtract the product added to cart count state variable
 	const subtractProductCartCount = () => {
 		if(productAddedCount > 0) {
 			setProductAddedCount(prevValue => prevValue - 1);
 		}
 	};
 
+  // add the product added to cart count state variable
 	const addProductCartCount = () => {
 		setProductAddedCount(prevValue => prevValue + 1);
 	};
 
+  // if error state variable is not null we want to display the error page
 	if(error) {
 		return <ErrorPage />
 	}
 
+  // return the main html content for this component
 	return (
 		<section className="content-section-product-details" >
 			<div className="product-details-section">
 				<div className="product-details-images">
+          {/* product main image */}
 					{product && product.image ? (
 						<img 
 							className="product-details-main-image" 
@@ -68,7 +71,9 @@ const ProductDetails = () => {
 						<Skeleton className="product-details-main-image" />
 					)}
 				</div>
+
 				<div className="product-details-information">
+          {/* product category */}
 					{product && product.category ? (
 						<span 
 							className="product-details-category" 
@@ -79,6 +84,8 @@ const ProductDetails = () => {
 					) : (
 						<Skeleton className="product-details-category"  />
 					)}
+
+          {/* product title */}
 					{product && product.title ? (
 						<span 
 							className="product-details-title"
@@ -88,6 +95,8 @@ const ProductDetails = () => {
 					) : (
 						<Skeleton className="product-details-title" />
 					)}
+
+          {/* product description */}
 					{product && product.description ? (
 						<span 
 							className="product-details-description"
@@ -97,15 +106,19 @@ const ProductDetails = () => {
 					) : (
 						<Skeleton className="product-details-description" />
 					)}
-					{product && product.description ? (
+
+          {/* product price to the hundres decimal place */}
+					{product && product.price ? (
 						<span 
-							className="product-details-description"
-							aria-label={`Product description ${product.description}`}>
-							{product.description}
+							className="product-details-price"
+							aria-label={`Product description ${product.price}`}>
+							$ {product.price}
 						</span>
 					) : (
 						<Skeleton className="product-details-description" />
 					)}
+
+          {/* product add to cart section */}
 					{product && (
 						<AddToCartSection 
 							count={productAddedCount}
@@ -119,4 +132,5 @@ const ProductDetails = () => {
 	)
 }
 
+// export default component
 export default ProductDetails;

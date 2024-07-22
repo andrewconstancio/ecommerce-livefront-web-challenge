@@ -32,8 +32,8 @@ export const navItems = [{
 	},
 	{
 		id: 3,
-		title: "New & Features",
-		path: "/newfeatures"
+		title: "New & Featured",
+		path: "/newfeatured"
 	},
 	{
 		id: 4,

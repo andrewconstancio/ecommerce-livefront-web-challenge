@@ -7,8 +7,11 @@ import { RxCross2 } from "react-icons/rx";
 import React from 'react';
 
 const MobileNavBar = () => {
+
+  // starting depth of naviation item
 	const depthLevel = 0;
 
+  // state variable to show / hide the navigation menu
 	const [showMenu, setShowMenu] = useState(false);
 
 	const toggleMenu = () => {
@@ -34,16 +37,20 @@ const MobileNavBar = () => {
 					)}
 				</button>
 
+        {/* main store logo text on navigation bar */}
 				<Link 
 					to={"/"} 
+          onClick={() => toggleMenu()}
 					className="logo-text-mobile" 
 					aria-label="Go to home screen"
 					>Fake Store
 				</Link>
 			</div>
 	
+      {/* if show menu state variable is true show navigation menu items  */}
 			{showMenu && (
 				<ul className="menus">
+          {/* loop over navigation items  */}
 					{navItems.map((menu, index) => {
 					return (
 						<MobileMenuItems

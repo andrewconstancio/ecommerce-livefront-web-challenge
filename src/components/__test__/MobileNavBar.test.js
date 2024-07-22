@@ -7,14 +7,10 @@ import MobileNavBar from '../Navbar/MobileNavBar';
 import { navItems } from '../../static/Navitems';
 
 describe('Testing MobileNavBar Component', () => {
-	afterEach(() => {
-		cleanup();
-	});
-
 	it('renders the MobileNavBar component', () => {
 		render(
 		  <MemoryRouter>
-			<MobileNavBar />
+			  <MobileNavBar />
 		  </MemoryRouter>
 		);
 	

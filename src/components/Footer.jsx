@@ -5,7 +5,7 @@ const Footer = () => {
 		<footer className="content-footer">
 			<div className="footer-container">
 				<p>
-					Copyright &copy; Andrew Constancio. All rights reserved.
+					Website made by Andrew Constancio.
 				</p>
 			</div>
 		</footer>

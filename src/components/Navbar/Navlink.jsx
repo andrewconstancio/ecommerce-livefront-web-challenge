@@ -6,12 +6,16 @@ import React from 'react';
 
 const NavLink = ({item}) => {
 
+	// state variable to show / hide drop down of navigation tiems
 	const [dropdown, setDropdown] = useState(false);
-	let ref = useRef();
 
+  // reference for navigation list
+	let listRef = useRef();
+
+  // change show / hide dropdown state when mouse enter the navgaiton link area
 	useEffect(() => {
 		const handler = (event) => {
-			if (dropdown && ref.current && !ref.current.contains(event.target)) {
+			if (dropdown && listRef.current && !listRef.current.contains(event.target)) {
 				setDropdown(false);
 			}
 		};
@@ -23,14 +27,17 @@ const NavLink = ({item}) => {
 		};
 	}, [dropdown]);
   
+  // set dropdown state variable to true on enter area
 	const onMouseEnter = () => {
 		setDropdown(true);
 	};
   
+  // set dropdown state variable to false on enter area
 	const onMouseLeave = () => {
 		setDropdown(false);
 	};
   
+  // toggle dropdown state variable
 	const toggleDropdown = () => {
 		setDropdown((prev) => !prev);
 	};
@@ -38,10 +45,11 @@ const NavLink = ({item}) => {
 	return (
 		<li
 			className="menu-items"
-			ref={ref}
+			ref={listRef}
 			onMouseEnter={onMouseEnter}
 			onMouseLeave={onMouseLeave}
 		>
+    {/* if navigation item has children render addition navigation menu */}
 		{item.children ? (
 			<>
 				<button
@@ -75,6 +83,7 @@ const NavLink = ({item}) => {
 		)}
 	</li>
 	)
-  }
+}
   
-  export default NavLink;
+// export default component 
+export default NavLink;

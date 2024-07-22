@@ -3,16 +3,16 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup, waitFor, fireEvent } from '@testing-library/react';
 import { MemoryRouter, Routes, Route } from 'react-router-dom';
-import { getProductById } from '../../data';
+import { getProductById } from '../../api/data';
 import ProductDetails from '../ProductDetails';
 
 // mock getProductById API call
-jest.mock('../../data', () => ({
+jest.mock('../../api/data', () => ({
 	getProductById: jest.fn(),
 }));
 
 // mock error page component
-jest.mock('../../ErrorPage', () => () => <div>Error Page</div>);
+jest.mock('../../pages/ErrorPage', () => () => <div>Error Page</div>);
 
 // mock AddToCartButton component
 jest.mock('../../components/AddToCartButton', () => () => <button>Add to Cart</button>);

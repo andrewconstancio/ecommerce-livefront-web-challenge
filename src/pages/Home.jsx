@@ -1,22 +1,22 @@
-import AppBanner from "../components/HeroSection"
+import React from "react";
+import HeroSection from "../components/HeroSection"
 import { useState, useEffect } from "react"
-import { getAllProducts } from "../data";
-import React from 'react';
+import { getAllProducts } from "../api/data";
 import ProductGrid from "../components/ProductGrid";
-import ErrorPage from "../ErrorPage";
+import ErrorPage from "./ErrorPage";
 
 const Home = () => {
 
-	// all products fetched up API
+	// get products fetched by the API and store them into a state array
 	const [products, setProducts] = useState([]);
 
-	// API loading state
+	// state variable to indicate for loading state by the API
 	const [isLoadingProducts, setIsLoadingProducts] = useState(true);
 
-	// API error
+	// state variable for when an errors occures when fetching data from the API
 	const [error, setError] = useState();
 
-	// fetch product details on component render
+	// fetch all products whenever this conponent renders. products state, loading state, and error state are set here
 	useEffect(() => {
 		async function fetchAllProducts() {
 			try {
@@ -28,19 +28,21 @@ const Home = () => {
 				setIsLoadingProducts(false);
 			}
 		}
+
+		// call fetch all products async function
 		fetchAllProducts();
 	}, []);
 
-	// if an error display the error page
+	// if error state variable is not null we want to display the error page
 	if(error) {
 		return <ErrorPage />
 	}
 
-	// component main content
+	// return the main html content for this component
 	return (
 		<>
-			{/* hero section hom page */}
-			<AppBanner />
+			{/* hero section home page*/}
+			<HeroSection />
 
 			{/* all product section */}
 			<ProductGrid 

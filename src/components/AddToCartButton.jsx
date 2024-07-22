@@ -1,7 +1,7 @@
-
 import React from "react";
 
 const AddToCardButton = ({customClass}) => {
+	// return the main html content for this component
 	return (
 		<button className={customClass}>
 				Add To Cart
@@ -9,4 +9,5 @@ const AddToCardButton = ({customClass}) => {
 	)
 }
 
+// export default component
 export default AddToCardButton;

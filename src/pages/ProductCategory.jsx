@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getProductsByCategoryName } from "../data";
+import { getProductsByCategoryName } from "../api/data";
 import ProductGrid from "../components/ProductGrid";
 
 const ProductCategory = () => {

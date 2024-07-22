@@ -6,25 +6,26 @@ import React from 'react';
 
 const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 
-	// depth of the menu item
+	// state variable to show / hide drop down of navigation tiems
 	const [dropdown, setDropdown] = useState(false);
   
-	// toggle child navigation drop down 
-	const toggleDropdown = (e) => {
-		e.stopPropagation();
+	// toggle the state variable to show / hide drop down of navigation tiems
+	const toggleDropdown = () => {
 		setDropdown((prev) => !prev);
 	};
 
+  // return the main html content for this component
 	return (
 		<li className="menu-items">
+      {/* if navigation item has children render the mobile dropdown component */}
 			{item.children ? (
 				<>
 					<button
-						data-testId="mobile-dropdown-expand-button"
+						data-testid="mobile-dropdown-expand-button"
 						type="button"
 						aria-haspopup="menu"
 						aria-expanded={dropdown ? "true" : "false"}
-						onClick={(e) => toggleDropdown(e)}>
+						onClick={() => toggleDropdown()}>
 						<span className="nav-main-item">{item.title}</span>
 						<FaChevronDown 
 							className={dropdown ? "nav-item-chevron-rotate" : "nav-item-transition"} 
@@ -37,7 +38,8 @@ const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 						toggleMenu={toggleMenu}
 					/>
 				</>
-			) : (
+			) : ( 
+        // if naviation item has no children render the naviation link to page
 				<Link
 					to={item.path} 
 					role="button"  
@@ -45,7 +47,7 @@ const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 					type="button"
 					aria-haspopup="menu"
 					aria-expanded={dropdown ? "true" : "false"}
-					onClick={(e) => toggleMenu(e)}
+					onClick={() => toggleMenu()}
 				>
 					{item.title}
 				</Link>
@@ -54,4 +56,5 @@ const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 	)
 }
   
+// export default component 
 export default MobileMenuItems;

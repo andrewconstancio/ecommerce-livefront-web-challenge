@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">96% </span>
+                <span class="strong">95.65% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>24/25</span>
+                <span class='fraction'>22/23</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.61% </span>
+                <span class="strong">93.93% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/13</span>
+                <span class='fraction'>31/33</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">95.65% </span>
+                <span class="strong">95.23% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>22/23</span>
+                <span class='fraction'>20/21</span>
             </div>
         
             
@@ -163,7 +163,28 @@
 <a name='L98'></a><a href='#L98'>98</a>
 <a name='L99'></a><a href='#L99'>99</a>
 <a name='L100'></a><a href='#L100'>100</a>
-<a name='L101'></a><a href='#L101'>101</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,10 +238,29 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">7x</span>
-<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -269,7 +309,8 @@ import { useEffect, useState } from "react";
 import { getProductById } from "../data";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import AddToCartSection from '../components/AddToCartSection';
-import ErrorPage from "../ErrorPage";
+import ErrorPage from "../pages/ErrorPage";
+import Skeleton from 'react-loading-skeleton';
 &nbsp;
 const ProductDetails = () =&gt; {
 &nbsp;
@@ -316,47 +357,66 @@ const ProductDetails = () =&gt; {
 		return &lt;ErrorPage /&gt;
 	}
 &nbsp;
-	if(!product) {
-		return null;
-	}
-&nbsp;
 	return (
 		&lt;section className="content-section-product-details" &gt;
-			&lt;div className="product-details-section fade-in"&gt;
+			&lt;div className="product-details-section"&gt;
 				&lt;div className="product-details-images"&gt;
-					&lt;img 
-						className="product-details-main-image" 
-						loading="lazy" 
-						src={product.image} 
-						alt={`${product.title} image`}/&gt;
+					{product &amp;&amp; product.image ? (
+						&lt;img 
+							className="product-details-main-image" 
+							loading="lazy" 
+							src={product.image} 
+							alt={`${product.title} image`}
+						/&gt;
+					) : (
+						&lt;Skeleton className="product-details-main-image" /&gt;
+					)}
 				&lt;/div&gt;
 				&lt;div className="product-details-information"&gt;
-					&lt;span 
-						className="product-details-category" 
-						aria-label={`Product category ${product.category}`}
-					&gt;
-						{product.category}
-					&lt;/span&gt;
-					&lt;span 
-						className="product-details-title"
-						aria-label={`Product title ${product.title}`}&gt;
+					{product &amp;&amp; product.category ? (
+						&lt;span 
+							className="product-details-category" 
+							aria-label={`Product category ${product.category}`}
+						&gt;
+							{product.category}
+						&lt;/span&gt;
+					) : (
+						&lt;Skeleton className="product-details-category"  /&gt;
+					)}
+					{product &amp;&amp; product.title ? (
+						&lt;span 
+							className="product-details-title"
+							aria-label={`Product title ${product.title}`}&gt;
 							{product.title}
-					&lt;/span&gt;
-					&lt;span 
-						className="product-details-description"
-						aria-label={`Product description ${product.description}`}&gt;
+						&lt;/span&gt;
+					) : (
+						&lt;Skeleton className="product-details-title" /&gt;
+					)}
+					{product &amp;&amp; product.description ? (
+						&lt;span 
+							className="product-details-description"
+							aria-label={`Product description ${product.description}`}&gt;
 							{product.description}
-					&lt;/span&gt;
-					&lt;span 
-						className="product-details-price font-bold"
-						aria-label={`Product price ${product.price}`}&gt;
-							$ {product.price.toFixed(2)}
-					&lt;/span&gt;
-					&lt;AddToCartSection 
-						count={productAddedCount}
-						subtractProductCartCount={subtractProductCartCount}
-						addProductCartCount={addProductCartCount}
-					/&gt;
+						&lt;/span&gt;
+					) : (
+						&lt;Skeleton className="product-details-description" /&gt;
+					)}
+					{product &amp;&amp; product.price ? (
+						&lt;span 
+							className="product-details-price"
+							aria-label={`Product description ${product.price}`}&gt;
+							$ {product.price}
+						&lt;/span&gt;
+					) : (
+						&lt;Skeleton className="product-details-description" /&gt;
+					)}
+					{product &amp;&amp; (
+						&lt;AddToCartSection 
+							count={productAddedCount}
+							subtractProductCartCount={subtractProductCartCount}
+							addProductCartCount={addProductCartCount}
+						/&gt;
+					)}
 				&lt;/div&gt;
 			&lt;/div&gt;
 		&lt;/section&gt;
@@ -370,7 +430,7 @@ export default ProductDetails;</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-07-22T01:07:58.399Z
+                at 2024-07-22T06:08:05.051Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

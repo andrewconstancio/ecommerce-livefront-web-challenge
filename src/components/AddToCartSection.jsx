@@ -3,6 +3,8 @@ import AddToCardButton from "../components/AddToCartButton";
 import ProductCounter from "./ProductCounter";
 
 const AddToCartSection = ({ count, subtractProductCartCount, addProductCartCount }) => {
+  
+  // return the main html content for this component
 	return (
 		<div className="product-details-add-to-cart-section">
 			{/* plus / minus add to car buttons */}

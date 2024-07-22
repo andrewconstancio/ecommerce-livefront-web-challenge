@@ -6,12 +6,7 @@ import { MemoryRouter } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import { navItems } from '../../static/Navitems';
 
-describe('Testing Navbar component', () => {
-
-	afterEach(() => {
-		cleanup();
-	});
-	
+describe('Testing Navbar component', () => {	
 	it('renders the store text', () => {
 		render (
 			<MemoryRouter>

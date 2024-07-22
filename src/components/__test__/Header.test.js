@@ -10,15 +10,15 @@ jest.mock('../Navbar/Navbar');
 jest.mock('../Navbar/MobileNavbar');
 
 describe('Testing the Header Component', () => {
-	it('renders the desktop nav and mobile nav components', () => {
-		Navbar.mockImplementation(() => <div data-testid="navbar" />);
-		MobileNavbar.mockImplementation(() => <div data-testid="mobilenavbar" />);
-		
-		render (
-			<Header />
-		);
+  it('renders the desktop nav and mobile nav components', () => {
+    Navbar.mockImplementation(() => <div data-testid="navbar" />);
+    MobileNavbar.mockImplementation(() => <div data-testid="mobilenavbar" />);
+    
+    render (
+      <Header />
+    );
 
-		expect(screen.getByTestId('navbar')).toBeInTheDocument();
-		expect(screen.getByTestId('mobilenavbar')).toBeInTheDocument();
-	});
+    expect(screen.getByTestId('navbar')).toBeInTheDocument();
+    expect(screen.getByTestId('mobilenavbar')).toBeInTheDocument();
+  });
 });
