@@ -4,7 +4,7 @@ import Home from "./pages/Home"
 import ProductCategory from "./pages/ProductCategory"
 import ProductDetails from "./pages/ProductDetails"
 import React from 'react';
-import RouteNotFoundPage from './RouteNotFoundPage';
+import RouteNotFoundPage from './pages/RouteNotFoundPage';
 import Footer from "./components/Footer"
 import DealsInformation from "./pages/DealsInformation";
 import NewFeatured from "./pages/NewFeatured"

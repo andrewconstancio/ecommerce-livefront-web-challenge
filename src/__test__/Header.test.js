@@ -2,12 +2,12 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup } from '@testing-library/react';
-import Header from '../Navbar/Header';
-import Navbar from '../Navbar/Navbar';
-import MobileNavbar from '../Navbar/MobileNavBar';
+import Header from '../components/Navbar/Header';
+import Navbar from '../components/Navbar/Navbar';
+import MobileNavbar from '../components/Navbar/MobileNavBar';
 
-jest.mock('../Navbar/Navbar');
-jest.mock('../Navbar/MobileNavbar');
+jest.mock('../components/Navbar/Navbar');
+jest.mock('../components/Navbar/MobileNavBar');
 
 describe('Testing the Header Component', () => {
   it('renders the desktop nav and mobile nav components', () => {

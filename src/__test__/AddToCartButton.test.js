@@ -2,7 +2,7 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup } from '@testing-library/react';
-import AddToCartButton from "../AddToCartButton";
+import AddToCartButton from "../components/AddToCartButton";
 
 describe('Testing Add To Cart Button Component', () => {
   it('renders with default test', () => {

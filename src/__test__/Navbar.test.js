@@ -3,8 +3,8 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Navbar from '../Navbar/Navbar';
-import { navItems } from '../../static/Navitems';
+import Navbar from '../components/Navbar/Navbar';
+import { navItems } from '../static/Navitems';
 
 describe('Testing Navbar component', () => {	
 	it('renders the store text', () => {

@@ -3,14 +3,14 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import NavLink from '../Navbar/Navlink';
+import NavLink from '../components/Navbar/Navlink';
 
 // mock of nav dropdown component
-jest.mock('../Navbar/Navdropdown', () => ({ _, dropdown, toggleDropdown }) => (
+jest.mock('../components/Navbar/Navdropdown', () => ({ _, dropdown, toggleDropdown }) => (
   <div>{dropdown ? 'Dropdown Open' : 'Dropdown Closed'}</div>
 ));
 
-const itemWithChildren = {
+const navItemWithChildren = {
 	title: 'Parent Item',
 	path: '/parent',
 	children: [
@@ -19,7 +19,7 @@ const itemWithChildren = {
 	],
 };
   
-const itemWithoutChildren = {
+const navItemWithoutChildren = {
 	title: 'Single Item',
 	path: '/single',
 };
@@ -28,7 +28,7 @@ describe('Testing Navlink component', () => {
 	it('renders a link with the correct test', () => {
 		render (
 			<MemoryRouter>
-				<NavLink item={itemWithoutChildren} depthLevel={0}/>
+				<NavLink item={navItemWithoutChildren} depthLevel={0}/>
 			</MemoryRouter>
 		);
 
@@ -39,7 +39,7 @@ describe('Testing Navlink component', () => {
 
 		render (
 			<MemoryRouter>
-				<NavLink item={itemWithChildren} depthLevel={0}/>
+				<NavLink item={navItemWithChildren} depthLevel={0}/>
 			</MemoryRouter>
 		);
 
@@ -58,7 +58,7 @@ describe('Testing Navlink component', () => {
 
 		render (
 			<MemoryRouter>
-				<NavLink item={itemWithChildren} depthLevel={0}/>
+				<NavLink item={navItemWithChildren} depthLevel={0}/>
 			</MemoryRouter>
 		);
 

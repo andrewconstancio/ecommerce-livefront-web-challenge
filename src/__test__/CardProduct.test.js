@@ -3,7 +3,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import CardProduct from '../CardProduct';
+import CardProduct from '../components/CardProduct';
 
 const mockProduct = {
   id: '1',

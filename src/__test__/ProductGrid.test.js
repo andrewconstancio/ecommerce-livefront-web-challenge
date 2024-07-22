@@ -2,11 +2,11 @@
 import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup} from '@testing-library/react';
-import ProductGrid from '../ProductGrid';
+import ProductGrid from '../components/ProductGrid';
 import { MemoryRouter } from 'react-router-dom';
 
 // mock error page component
-jest.mock('../../pages/ErrorPage', () => () => <div>Error Page</div>);
+jest.mock('../pages/ErrorPage', () => () => <div>Error Page</div>);
 
 // mock section title
 const mockSectionTitle = 'test';

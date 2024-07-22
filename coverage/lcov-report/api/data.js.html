@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">4.54% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>1/22</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">4.54% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>1/22</span>
             </div>
         
             
@@ -108,11 +108,7 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a>
-<a name='L47'></a><a href='#L47'>47</a>
-<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -157,17 +153,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
- * 
- * 
- */
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const FAKE_STORE_URL = "https://fakestoreapi.com";
+&nbsp;
 export async function <span class="fstat-no" title="function not covered" >getAllProducts(</span>) {
 <span class="cstat-no" title="statement not covered" >	try {</span>
-		const response = <span class="cstat-no" title="statement not covered" >await fetch("https://fakestoreapi.com/products");</span>
+		const response = <span class="cstat-no" title="statement not covered" >await fetch(`${FAKE_STORE_URL}/products`);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >		if (!response.ok) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('Network response was not ok');</span>
-        }
+<span class="cstat-no" title="statement not covered" >      throw new Error('Network response was not ok');</span>
+    }
 &nbsp;
 		const data = <span class="cstat-no" title="statement not covered" >await response.json();</span>
 <span class="cstat-no" title="statement not covered" >		return data;</span>
@@ -178,11 +172,11 @@ export async function <span class="fstat-no" title="function not covered" >getAl
 &nbsp;
 export async function <span class="fstat-no" title="function not covered" >getProductById(</span>id) {
 <span class="cstat-no" title="statement not covered" >	try {</span>
-		const response = <span class="cstat-no" title="statement not covered" >await fetch(`https://fakestoreapi.com/products/${id}`);</span>
+		const response = <span class="cstat-no" title="statement not covered" >await fetch(`${FAKE_STORE_URL}/products/${id}`);</span>
 		
 <span class="cstat-no" title="statement not covered" >		if (!response.ok) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('Network response was not ok');</span>
-        }
+<span class="cstat-no" title="statement not covered" >      throw new Error('Network response was not ok');</span>
+    }
 &nbsp;
 		const data = <span class="cstat-no" title="statement not covered" >await response.json();</span>
 <span class="cstat-no" title="statement not covered" >		return data;</span>
@@ -193,11 +187,11 @@ export async function <span class="fstat-no" title="function not covered" >getPr
 &nbsp;
 export async function <span class="fstat-no" title="function not covered" >getProductsByCategoryName(</span>name) {
 <span class="cstat-no" title="statement not covered" >	try {</span>
-		const response = <span class="cstat-no" title="statement not covered" >await fetch(`https://fakestoreapi.com/products/category/${name}`);</span>
+		const response = <span class="cstat-no" title="statement not covered" >await fetch(`${FAKE_STORE_URL}/products/category/${name}`);</span>
 		
 <span class="cstat-no" title="statement not covered" >		if (!response.ok) {</span>
-<span class="cstat-no" title="statement not covered" >            throw new Error('Network response was not ok');</span>
-        }
+<span class="cstat-no" title="statement not covered" >      throw new Error('Network response was not ok');</span>
+    }
 &nbsp;
 		const data = <span class="cstat-no" title="statement not covered" >await response.json();</span>
 <span class="cstat-no" title="statement not covered" >		return data;</span>
@@ -211,7 +205,7 @@ export async function <span class="fstat-no" title="function not covered" >getPr
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-07-22T06:35:57.011Z
+                at 2024-07-22T07:41:14.992Z
             </div>
         <script src="../prettify.js"></script>
         <script>

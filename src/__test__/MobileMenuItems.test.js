@@ -3,7 +3,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import MobileMenuItems from '../Navbar/MobileMenuItems';
+import MobileMenuItems from '../components/Navbar/MobileMenuItems';
 
 const mockItemWithChildren = {
   title: 'Parent Item',

@@ -3,10 +3,10 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Navdropdown from '../Navbar/Navdropdown';
+import Navdropdown from '../components/Navbar/Navdropdown';
 
 
-const itemWithGroupTitle = {
+const navItemWithGroupTitle = {
 	groupTitle: 'Group Title',
 	children: [
 		{ id: 1, title: 'Child Item 1', path: '/child1' },
@@ -14,7 +14,7 @@ const itemWithGroupTitle = {
 	],
 };
   
-const itemWithoutGroupTitle = {
+const navItemWithoutGroupTitle = {
 	children: [
 		{ id: 1, title: 'Child Item 1', path: '/child1' },
 		{ id: 2, title: 'Child Item 2', path: '/child2' },
@@ -25,7 +25,7 @@ describe('Test Navdropdown Component', () => {
 	it('renders the group title if exist', () => {
 		render (
 			<MemoryRouter>
-				<Navdropdown item={itemWithGroupTitle} dropdown={true} toggleDropdown={() => {}} />
+				<Navdropdown item={navItemWithGroupTitle} dropdown={true} toggleDropdown={() => {}} />
 			</MemoryRouter>
 		);
 
@@ -35,7 +35,7 @@ describe('Test Navdropdown Component', () => {
 	it('renders the navigation items with title', () => {
 		render (
 			<MemoryRouter>
-				<Navdropdown item={itemWithGroupTitle} dropdown={true} toggleDropdown={() => {}} />
+				<Navdropdown item={navItemWithGroupTitle} dropdown={true} toggleDropdown={() => {}} />
 			</MemoryRouter>
 		);
 
@@ -46,7 +46,7 @@ describe('Test Navdropdown Component', () => {
 	it('renders the navigation items no title', () => {
 		render (
 			<MemoryRouter>
-				<Navdropdown item={itemWithoutGroupTitle} dropdown={true} toggleDropdown={() => {}} />
+				<Navdropdown item={navItemWithoutGroupTitle} dropdown={true} toggleDropdown={() => {}} />
 			</MemoryRouter>
 		);
 

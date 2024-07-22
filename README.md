@@ -2,10 +2,7 @@
 
 This is a fully responsive ecommerce website built with React and CSS. The website uses the Fake Store API to fetch and display products.
 
-## Table of Contents
-
-
-
+<img src="drawing.jpg" alt="drawing" style="width:200px;"/>
 
 
 ## Installation and Setup

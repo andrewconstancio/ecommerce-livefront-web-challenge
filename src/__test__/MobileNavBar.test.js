@@ -3,8 +3,8 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import MobileNavBar from '../Navbar/MobileNavBar';
-import { navItems } from '../../static/Navitems';
+import MobileNavBar from '../components/Navbar/MobileNavBar';
+import { navItems } from '../static/Navitems';
 
 describe('Testing MobileNavBar Component', () => {
   it('renders the MobileNavBar component', () => {

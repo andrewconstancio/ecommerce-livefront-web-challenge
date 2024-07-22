@@ -3,7 +3,7 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import HeroSection from '../HeroSection';
+import HeroSection from '../components/HeroSection';
 
 describe('Testing Hero Section Component', () => {
   it('renders default text and elements', () => {
