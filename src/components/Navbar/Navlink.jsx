@@ -1,8 +1,8 @@
+import React from 'react';
 import { Link } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
 import Navdropdown from "./Navdropdown";
-import React from 'react';
 
 const NavLink = ({item}) => {
 

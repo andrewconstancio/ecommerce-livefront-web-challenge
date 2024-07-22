@@ -1,7 +1,7 @@
 import React from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 
-const ProductCounter = ({count, subtractProductCartCount, addProductCartCount}) => {
+const ProductCounter = ({ count, subtractProductCartCount, addProductCartCount }) => {
 
   // return the main html content for this component
 	return (

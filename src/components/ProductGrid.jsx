@@ -2,7 +2,7 @@ import React from "react";
 import CardProduct from "./CardProduct";
 import Skeleton from 'react-loading-skeleton'
 
-const ProductGrid = ({sectionTitle, products, isLoading}) => {
+const ProductGrid = ({ sectionTitle, products, isLoading }) => {
 
 	// if the loading state passed in true we will return a grid view of loader skeletons for the product cards
 	if(isLoading) {
@@ -12,9 +12,7 @@ const ProductGrid = ({sectionTitle, products, isLoading}) => {
 
           {/* render 10 skelton product card components */}
 					{Array(10).fill().map((_, index) => (
-						<div key={index} className="product-item">
-							<Skeleton />
-						</div>
+							<Skeleton key={index} className="product-item"  />
 					))}
           
 				</div>

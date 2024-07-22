@@ -19,11 +19,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smooth: never;
+  min-height: 100vh;
 }
 
 .content-section {
   margin: 2rem auto;
   max-width: 70%;
+  /* min-height: 100vh; */
+  position: relative;
   min-height: 100vh;
 }
 
@@ -151,7 +154,7 @@ body {
 
 /* hero section */
 .hero-section .hero-section-image {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./src/assets/hero-image-1.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/src/assets/hero-image-1.jpeg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
@@ -224,6 +227,7 @@ body {
   cursor: pointer;
   text-align: left;
   min-height: 14rem;
+  width: inherit;
 }
 
 .content-section .content-product-section .product-item a {
@@ -467,13 +471,13 @@ body {
     display: block;
     padding-top: 1rem;
   }
-  .mobile-nav .mobile-nav__menu-button {
+  .mobile-nav .mobile-nav-menu-button {
     color: inherit;
-    font-size: 2.5rem;
+    font-size: 3rem;
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding-top: 5px;
+    padding-top: 4px;
   }
   .mobile-nav .menus {
     list-style: none;
@@ -571,11 +575,11 @@ body {
 }
 
 .content-footer {
-  height: 20%;
   background-color: #ededed;
   position: relative;
   bottom: 0;
-  min-width: 100%;
+  width: 100%;
+  height: 10%;
 }
 
 .content-footer .footer-container {

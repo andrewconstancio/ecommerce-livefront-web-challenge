@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
 import React from 'react';
+import { Link } from "react-router-dom";
 
-const Navdropdown = ({listElementId, item, dropdown, toggleDropdown}) => {
+const Navdropdown = ({ listElementId, item, dropdown, toggleDropdown }) => {
   // return the main html content for this component
 	return (
 		<ul id={listElementId} className={`dropdown ${dropdown ? "show" : ""}`} aria-expanded={dropdown}>

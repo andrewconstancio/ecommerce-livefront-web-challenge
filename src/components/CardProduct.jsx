@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import React from 'react';
 import AddToCartButton from "./AddToCartButton";
 
-const CardProduct = ({product}) => {
+const CardProduct = ({ product }) => {
 
 	// if there is a missing property on the product prop we will return null for the component
 	if(!product || !product.image || !product.title || !product.category || !product.price) {

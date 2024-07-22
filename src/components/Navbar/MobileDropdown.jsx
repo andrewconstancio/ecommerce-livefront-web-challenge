@@ -1,7 +1,7 @@
 import MobileMenuItems from "./MobileMenuItems";
 import React from 'react';
 
-const MobileDropdown = ({item, dropdown, depthLevel, toggleMenu}) => {
+const MobileDropdown = ({ item, dropdown, depthLevel, toggleMenu }) => {
 
 	// return the main html content for this component
 	return (

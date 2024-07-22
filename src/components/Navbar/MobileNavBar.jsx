@@ -22,7 +22,7 @@ const MobileNavBar = () => {
 		<nav className="mobile-nav" aria-label="main">
 			<div className="mobile-logo-area">
 				<button
-					className="mobile-nav__menu-button"
+					className="mobile-nav-menu-button"
 					type="button"
 					onClick={() => toggleMenu()}
 					aria-haspopup="menu"

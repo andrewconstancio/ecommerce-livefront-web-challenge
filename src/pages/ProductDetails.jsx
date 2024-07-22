@@ -111,8 +111,8 @@ const ProductDetails = () => {
 					{product && product.price ? (
 						<span 
 							className="product-details-price"
-							aria-label={`Product description ${product.price}`}>
-							$ {product.price}
+							aria-label={`Product description ${product.price.toFixed(2)}`}>
+							$ {product.price.toFixed(2)}
 						</span>
 					) : (
 						<Skeleton className="product-details-description" />

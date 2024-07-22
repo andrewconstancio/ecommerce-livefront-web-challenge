@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1721634075010" clover="3.2.0">
-  <project timestamp="1721634075011" name="All files">
+<coverage generated="1721661395648" clover="3.2.0">
+  <project timestamp="1721661395648" name="All files">
     <metrics statements="126" coveredstatements="97" conditionals="99" coveredconditionals="81" methods="48" coveredmethods="38" elements="273" coveredelements="216" complexity="0" loc="126" ncloc="126" packages="5" files="18" classes="18"/>
     <package name="api">
       <metrics statements="22" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="3" coveredmethods="0"/>
@@ -65,10 +65,10 @@
         <line num="8" count="7" type="cond" truecount="2" falsecount="0"/>
         <line num="9" count="3" type="stmt"/>
         <line num="15" count="30" type="stmt"/>
-        <line num="26" count="4" type="cond" truecount="2" falsecount="0"/>
-        <line num="27" count="2" type="stmt"/>
-        <line num="31" count="2" type="stmt"/>
-        <line num="41" count="4" type="stmt"/>
+        <line num="24" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
       </file>
     </package>
     <package name="components.Navbar">
