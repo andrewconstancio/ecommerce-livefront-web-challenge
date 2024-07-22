@@ -1,5 +1,18 @@
+/**
+ * The base URL for the fake store API. https://fakestoreapi.com".
+ *
+ * @constant {string}
+ */
 const FAKE_STORE_URL = "https://fakestoreapi.com";
 
+/**
+ * Fetches all products from the fake store API.
+ *
+ * @async
+ * @function getAllProducts
+ * @returns {Object[]} Array of product objects.
+ * @throws {Error} If the network response is not ok or if fetching the products fails.
+ */
 export async function getAllProducts() {
 	try {
 		const response = await fetch(`${FAKE_STORE_URL}/products`);
@@ -15,6 +28,14 @@ export async function getAllProducts() {
 	}
 }
 
+/**
+ * Fetches product by ID from the fake store API.
+ *
+ * @async
+ * @function getProductById
+ * @returns {Object} Product object.
+ * @throws {Error} If the network response is not ok or if fetching the products fails.
+ */
 export async function getProductById(id) {
 	try {
 		const response = await fetch(`${FAKE_STORE_URL}/products/${id}`);
@@ -30,6 +51,14 @@ export async function getProductById(id) {
 	}
 }
 
+/**
+ * Fetches products by category name from the fake store API.
+ *
+ * @async
+ * @function getProductsByCategoryName
+ * @returns {Object[]} Array of product objects.
+ * @throws {Error} If the network response is not ok or if fetching the products fails.
+ */
 export async function getProductsByCategoryName(name) {
 	try {
 		const response = await fetch(`${FAKE_STORE_URL}/products/category/${name}`);
