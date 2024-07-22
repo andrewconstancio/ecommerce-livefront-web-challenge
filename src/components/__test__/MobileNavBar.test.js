@@ -7,31 +7,30 @@ import MobileNavBar from '../Navbar/MobileNavBar';
 import { navItems } from '../../static/Navitems';
 
 describe('Testing MobileNavBar Component', () => {
-	it('renders the MobileNavBar component', () => {
-		render(
-		  <MemoryRouter>
-			  <MobileNavBar />
-		  </MemoryRouter>
-		);
-	
-		expect(screen.getByRole('button', { name: /collapsed navigation submenu/i })).toBeInTheDocument();
-		expect(screen.getByText('Fake Store')).toBeInTheDocument();
-	});
+  it('renders the MobileNavBar component', () => {
+    render(
+      <MemoryRouter>
+        <MobileNavBar />
+      </MemoryRouter>
+    );
 
-	it('shows menu items when menu is clicked', () => {
-		render (
-			<MemoryRouter>
-				<MobileNavBar />
-			</MemoryRouter>
-		);
+    expect(screen.getByRole('button', { name: /collapsed navigation submenu/i })).toBeInTheDocument();
+    expect(screen.getByText('Fake Store')).toBeInTheDocument();
+  });
 
-		const toggleButton = screen.getByRole('button', { name: /collapsed navigation submenu/i });
+  it('shows menu items when menu is clicked', () => {
+    render (
+      <MemoryRouter>
+        <MobileNavBar />
+      </MemoryRouter>
+    );
 
-		fireEvent.click(toggleButton);
+    const toggleButton = screen.getByRole('button', { name: /collapsed navigation submenu/i });
 
-		navItems.forEach(item => {
-			expect(screen.getByText(item.title)).toBeInTheDocument();
-		});
-	});
+    fireEvent.click(toggleButton);
 
+    navItems.forEach(item => {
+      expect(screen.getByText(item.title)).toBeInTheDocument();
+    });
+  });
 });

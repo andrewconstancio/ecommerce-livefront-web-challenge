@@ -5,8 +5,8 @@ export async function getAllProducts() {
 		const response = await fetch(`${FAKE_STORE_URL}/products`);
 
 		if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+      throw new Error('Network response was not ok');
+    }
 
 		const data = await response.json();
 		return data;
@@ -20,8 +20,8 @@ export async function getProductById(id) {
 		const response = await fetch(`${FAKE_STORE_URL}/products/${id}`);
 		
 		if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+      throw new Error('Network response was not ok');
+    }
 
 		const data = await response.json();
 		return data;
@@ -35,8 +35,8 @@ export async function getProductsByCategoryName(name) {
 		const response = await fetch(`${FAKE_STORE_URL}/products/category/${name}`);
 		
 		if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+      throw new Error('Network response was not ok');
+    }
 
 		const data = await response.json();
 		return data;

@@ -31,4 +31,26 @@ describe('Test Navdropdown Component', () => {
 
 		expect(screen.getByText('Group Title')).toBeInTheDocument();
 	});
+
+	it('renders the navigation items with title', () => {
+		render (
+			<MemoryRouter>
+				<Navdropdown item={itemWithGroupTitle} dropdown={true} toggleDropdown={() => {}} />
+			</MemoryRouter>
+		);
+
+		expect(screen.getByText('Child Item 1')).toBeInTheDocument();
+		expect(screen.getByText('Child Item 2')).toBeInTheDocument();
+	});
+
+	it('renders the navigation items no title', () => {
+		render (
+			<MemoryRouter>
+				<Navdropdown item={itemWithoutGroupTitle} dropdown={true} toggleDropdown={() => {}} />
+			</MemoryRouter>
+		);
+
+		expect(screen.getByText('Child Item 1')).toBeInTheDocument();
+		expect(screen.getByText('Child Item 2')).toBeInTheDocument();
+	});
 });

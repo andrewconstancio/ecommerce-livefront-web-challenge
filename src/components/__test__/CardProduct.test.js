@@ -22,7 +22,7 @@ describe('Testing Card Product Component', () => {
     );
 
     expect(container.firstChild).toBeNull();
-  });
+});
 
   it(('returns null when item prod is invalid'), () => {
     const invalidProduct = {

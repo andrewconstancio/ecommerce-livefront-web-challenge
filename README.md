@@ -1,6 +1,11 @@
 # Fake Store Livefront Web Coding Challenge 
 
-This is aa fully responsive ecommerce website built with React and CSS. The website uses the Fake Store API tp fetch and display products.
+This is a fully responsive ecommerce website built with React and CSS. The website uses the Fake Store API to fetch and display products.
+
+## Table of Contents
+
+
+
 
 
 ## Installation and Setup
