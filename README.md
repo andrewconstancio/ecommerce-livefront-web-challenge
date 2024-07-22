@@ -14,6 +14,12 @@ This is a fully responsive ecommerce website built with React and CSS. The websi
 3. Run `npm start` to start the application.
 4. Open `http://localhost:5173/` in your browser to view the website.
 
+## Features
+
+- `Home page` displays `all products`, which are fetched from the **Fake Store API**. Each product card displays the product image, name, and price.
+- `Product Details` page showing a detailed view of the selected product, including an image, title, description and price.
+- Fully `responsive design` that can adapt to different screen sizes and devices.
+
 
 Thanks,
 Andrew
