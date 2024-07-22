@@ -1,4 +1,5 @@
 const ErrorPage = () => {
+	// return the main html content for this component
 	return (
 		<section className="content-section">
 			<h1>Oops!</h1>
@@ -7,4 +8,5 @@ const ErrorPage = () => {
 	);
 }
 
+	// export default component
 export default ErrorPage;

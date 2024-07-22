@@ -1,4 +1,5 @@
 const PickupDelivery = () => {
+	// return the main html content for this component
 	return (
 		<section className="content-section">
 			<h2>Pickup & Delivery</h2>
@@ -7,4 +8,5 @@ const PickupDelivery = () => {
 	);
 }
 
+	// export default component
 export default PickupDelivery;

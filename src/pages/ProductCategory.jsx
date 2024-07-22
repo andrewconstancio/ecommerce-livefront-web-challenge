@@ -47,4 +47,5 @@ const ProductCategory = () => {
 	);
 }
 
+	// export default component
 export default ProductCategory

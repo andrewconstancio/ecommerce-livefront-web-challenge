@@ -18,6 +18,7 @@ const MobileNavBar = () => {
 		setShowMenu((prev) => !prev);
 	};
 
+	// return the main html content for this component
 	return (
 		<nav className="mobile-nav" aria-label="main">
 			<div className="mobile-logo-area">
@@ -47,24 +48,25 @@ const MobileNavBar = () => {
 				</Link>
 			</div>
 	
-      {/* if show menu state variable is true show navigation menu items  */}
-			{showMenu && (
-				<ul className="menus">
-          {/* loop over navigation items  */}
-					{navItems.map((menu, index) => {
-					return (
-						<MobileMenuItems
-							key={index}
-							item={menu}
-							depthLevel={depthLevel}
-							toggleMenu={toggleMenu}
-						/>
-					);
-					})}
-				</ul>
-			)}
-	  	</nav>
-	)
+      	{/* if show menu state variable is true show navigation menu items  */}
+				{showMenu && (
+					<ul className="menus">
+						{/* loop over navigation items  */}
+							{navItems.map((menu, index) => {
+							return (
+								<MobileMenuItems
+									key={index}
+									item={menu}
+									depthLevel={depthLevel}
+									toggleMenu={toggleMenu}
+								/>
+							);
+							})}
+						</ul>
+					)}
+			</nav>
+		)
   }
   
+	// export default component
   export default MobileNavBar;

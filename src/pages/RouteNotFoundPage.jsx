@@ -1,4 +1,5 @@
 const RouteNotFoundPage = () => {
+  // return the main html content for this component
   return (
     <div className="content-section">
         <h1>404</h1>
@@ -9,4 +10,5 @@ const RouteNotFoundPage = () => {
   );
 }
 
+	// export default component
 export default RouteNotFoundPage;

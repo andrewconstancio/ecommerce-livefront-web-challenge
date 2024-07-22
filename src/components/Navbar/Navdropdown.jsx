@@ -27,4 +27,5 @@ const Navdropdown = ({ listElementId, item, dropdown, toggleDropdown }) => {
 	)
 }
   
+	// export default component
 export default Navdropdown;

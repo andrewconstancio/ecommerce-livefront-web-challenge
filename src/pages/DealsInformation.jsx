@@ -1,4 +1,5 @@
 const DealsInformation = () => {
+	// return the main html content for this component
 	return (
 		<section className="content-section">
 			<h2>Deals Information</h2>
@@ -7,4 +8,5 @@ const DealsInformation = () => {
 	);
 }
 
+	// export default component
 export default DealsInformation;

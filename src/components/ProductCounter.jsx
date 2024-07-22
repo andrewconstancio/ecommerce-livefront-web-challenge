@@ -33,4 +33,5 @@ const ProductCounter = ({ count, subtractProductCartCount, addProductCartCount }
 	);
 }
 
+// export default component
 export default ProductCounter;

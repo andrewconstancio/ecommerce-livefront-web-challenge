@@ -12,6 +12,7 @@ import PickupDelivery from "./pages/PickUpDelivery"
 
 const App = () => {
 
+	// return the main html content for this component
 	return (
 		<>
 			{/* Render the header of the application */}
@@ -49,6 +50,7 @@ const App = () => {
 	)
 }
 
+// export default component
 export default App;
 
 
