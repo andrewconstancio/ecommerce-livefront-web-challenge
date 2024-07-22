@@ -7,6 +7,7 @@ This is a fully responsive ecommerce website built with React and CSS. The websi
 
 - **React**: A JavaScript library for building user interfaces.
 - **CSS**: Cascading Style Sheets were used for styling.
+- **Jest**: Javascript testing framework was used for all testing.
 
 ## Installation and Setup
 1. Clone the repository to your local machine.
