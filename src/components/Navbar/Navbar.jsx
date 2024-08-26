@@ -1,5 +1,5 @@
-import { navItems } from "../../static/Navitems.js"
-import NavLink from "./Navlink.jsx";
+import { navItems } from "../../static/navItems.js"
+import NavLink from "./NavLink.jsx";
 import { Link } from "react-router-dom";
 import React from 'react';
 
@@ -24,6 +24,5 @@ const Navbar = () => {
 		</>
 	)
 }
-  
-// export default component 
+ 
 export default Navbar;

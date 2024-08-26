@@ -21,5 +21,4 @@ const MobileDropdown = ({ item, dropdown, depthLevel, toggleMenu }) => {
 	);
 };
 
-// export default component 
 export default MobileDropdown;

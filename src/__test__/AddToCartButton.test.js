@@ -13,7 +13,7 @@ describe('Testing Add To Cart Button Component', () => {
     expect(screen.getByRole('button', { name: /add to cart/i })).toBeInTheDocument();
   });
 
-  it('applies custom class when provied', () => {
+  it('applies custom class when provided', () => {
     const customClass = 'customer-class';
     render (
       <AddToCartButton customClass={customClass} />
@@ -22,7 +22,7 @@ describe('Testing Add To Cart Button Component', () => {
     expect(screen.getByRole('button')).toHaveClass(customClass);
   });
 
-  it('does not apply class when is not provied', () => {
+  it('does not apply class when is not provided', () => {
     render (
       <AddToCartButton />
     )

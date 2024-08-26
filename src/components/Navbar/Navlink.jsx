@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa6";
 import { useState, useRef, useEffect } from "react";
-import Navdropdown from "./Navdropdown";
+import NavDropdown from "./NavDropdown";
 
 const NavLink = ({item}) => {
 
-	// state variable to show / hide drop down of navigation tiems
+	// state variable to show / hide drop down of navigation items
 	const [dropdown, setDropdown] = useState(false);
 
   // reference for navigation list
 	let listRef = useRef();
 
-  // change show / hide dropdown state when mouse enter the navgaiton link area
+  // change show / hide dropdown state when mouse enters the navigation link area
 	useEffect(() => {
 		const handler = (event) => {
 			if (dropdown && listRef.current && !listRef.current.contains(event.target)) {
@@ -65,7 +65,7 @@ const NavLink = ({item}) => {
 					<span className="nav-main-item">{item.title}</span>
 					<FaChevronDown className={dropdown ? "nav-item-chevron-rotate" : "nav-item-transition"} />
 				</button>
-				<Navdropdown
+				<NavDropdown
 					listElementId={`menu-item-${item.id}`}
 					item={item}
 					dropdown={dropdown}
@@ -84,6 +84,5 @@ const NavLink = ({item}) => {
 	</li>
 	)
 }
-  
-// export default component 
+
 export default NavLink;

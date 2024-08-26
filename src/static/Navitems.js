@@ -14,9 +14,9 @@
  */
 export const navItems = [{
 		id: 1,
-		title: "Catagories",
+		title: "Categories",
 		path: "/",
-		groupTitle: "All catagories",
+		groupTitle: "All Categories",
 		children: [{
 				id: 1,
 				title: "Electronics",

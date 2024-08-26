@@ -6,10 +6,10 @@ import React from 'react';
 
 const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 
-	// state variable to show / hide drop down of navigation tiems
+	// state variable to show / hide drop down of navigation items
 	const [dropdown, setDropdown] = useState(false);
   
-	// toggle the state variable to show / hide drop down of navigation tiems
+	// toggle the state variable to show / hide drop down of navigation items
 	const toggleDropdown = () => {
 		setDropdown((prev) => !prev);
 	};
@@ -39,7 +39,7 @@ const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 					/>
 				</>
 			) : ( 
-        // if naviation item has no children render the naviation link to page
+        // if navigation item has no children render the navigation link to page
 				<Link
 					to={item.path} 
 					role="button"  
@@ -55,6 +55,5 @@ const MobileMenuItems = ({ item, depthLevel, toggleMenu}) => {
 		</li>
 	)
 }
-  
-// export default component 
+
 export default MobileMenuItems;

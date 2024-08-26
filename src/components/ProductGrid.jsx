@@ -27,7 +27,7 @@ const ProductGrid = ({ sectionTitle, products, isLoading }) => {
 
 	// return the main html content for this component
 	return (
-		<section className="content-section">
+		<section id={sectionTitle} className="content-section">
       {/* if a section title is passed through by a prop render the grid title */}
 			{sectionTitle && (
 				<span className="product-grid-title" aria-label={`${sectionTitle}`}>{sectionTitle}</span>
@@ -43,5 +43,4 @@ const ProductGrid = ({ sectionTitle, products, isLoading }) => {
 	)
 }
 
-// export default component
 export default ProductGrid;

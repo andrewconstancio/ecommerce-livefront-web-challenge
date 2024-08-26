@@ -36,8 +36,7 @@ const ProductCategory = () => {
 	if(error) {
 		return <ErrorPage />
 	}
-		
-	// component main content
+
 	return (
 		<ProductGrid 
 			sectionTitle={name} 
@@ -47,5 +46,4 @@ const ProductCategory = () => {
 	);
 }
 
-	// export default component
 export default ProductCategory

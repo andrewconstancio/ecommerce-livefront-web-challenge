@@ -33,7 +33,7 @@ const App = () => {
 					{/* Route for the new & features page */}
 					<Route path="/newfeatured" element={<NewFeatured />} />
 
-					{/* Route for deal inforation page */}
+					{/* Route for deal information page */}
 					<Route path="/deals" element={<DealsInformation />} />
 
 					{/* Route for pickup & delivery page */}
@@ -50,7 +50,6 @@ const App = () => {
 	)
 }
 
-// export default component
 export default App;
 
 
