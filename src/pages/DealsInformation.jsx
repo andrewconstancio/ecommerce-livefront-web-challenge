@@ -8,5 +8,4 @@ const DealsInformation = () => {
 	);
 }
 
-	// export default component
 export default DealsInformation;

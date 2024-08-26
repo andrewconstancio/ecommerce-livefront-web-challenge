@@ -9,5 +9,4 @@ const AddToCardButton = ({ customClass }) => {
 	)
 }
 
-// export default component
 export default AddToCardButton;

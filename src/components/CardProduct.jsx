@@ -18,27 +18,27 @@ const CardProduct = ({ product }) => {
 					className="product-item-image" 
 					loading="lazy" 
 					src={product.image} 
-					alt={`${product.title} image`}
+					alt={`${product.title}`}
 				/>
 
 				{/* product category */}
 				<span 
 					className="product-item-category"
-					aria-label={`Product category ${product.category}`}>
+					aria-label={`${product.category}`}>
 						{product.category}
 				</span>
 
 				{/* product title */}
 				<span 
 					className="product-item-title"
-					aria-label={`Product title ${product.title}`}>
+					aria-label={`${product.title}`}>
 						{product.title}
 				</span>
 				
-				{/* product price to the hundres decimal place */}
+				{/* product price to the hundreds decimal place */}
 				<span 
 					className="product-item-pricing"
-					aria-label={`Product pricing ${product.price}`}>
+					aria-label={`${product.price}`}>
 					$ {product.price.toFixed(2)}
 				</span>
 			</Link>
@@ -49,5 +49,4 @@ const CardProduct = ({ product }) => {
 	)
 }
 
-// export default component
 export default CardProduct;

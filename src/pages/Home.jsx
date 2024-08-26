@@ -13,10 +13,10 @@ const Home = () => {
 	// state variable to indicate for loading state by the API
 	const [isLoadingProducts, setIsLoadingProducts] = useState(true);
 
-	// state variable for when an errors occures when fetching data from the API
+	// state variable for when an errors occurs when fetching data from the API
 	const [error, setError] = useState();
 
-	// fetch all products whenever this conponent renders. products state, loading state, and error state are set here
+	// fetch all products whenever this component renders. products state, loading state, and error state are set here
 	useEffect(() => {
 		async function fetchAllProducts() {
 			try {
@@ -45,7 +45,8 @@ const Home = () => {
 			<HeroSection />
 
 			{/* all product section */}
-			<ProductGrid 
+			<ProductGrid
+				id="all-product-grid"
 				sectionTitle={"All Products"} 
 				products={products}
 				isLoading={isLoadingProducts} 
@@ -54,5 +55,4 @@ const Home = () => {
 	)
 }
 
-// export default component
 export default Home;

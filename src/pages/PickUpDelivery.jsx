@@ -8,5 +8,4 @@ const PickupDelivery = () => {
 	);
 }
 
-	// export default component
 export default PickupDelivery;

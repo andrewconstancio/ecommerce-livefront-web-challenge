@@ -7,7 +7,7 @@ const ProductCounter = ({ count, subtractProductCartCount, addProductCartCount }
 	return (
 		<div className="product-added-to-cart-plus-minus">
       
-      {/* descrease product added to cart count */}
+      {/* decrease product added to cart count */}
 			<button 
 				className="product-counter-button" 
 				onClick={subtractProductCartCount}
@@ -22,7 +22,7 @@ const ProductCounter = ({ count, subtractProductCartCount, addProductCartCount }
 					{count}
 			</span>
 
-      {/* inscrease product added to cart count */}
+      {/* increase product added to cart count */}
 			<button 
 				className="product-counter-button" 
 				onClick={addProductCartCount}
@@ -33,5 +33,4 @@ const ProductCounter = ({ count, subtractProductCartCount, addProductCartCount }
 	);
 }
 
-// export default component
 export default ProductCounter;

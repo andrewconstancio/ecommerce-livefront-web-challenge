@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import MobileNavBar from '../components/Navbar/MobileNavBar';
-import { navItems } from '../static/Navitems';
+import { navItems } from '../static/navItems';
 
 describe('Testing MobileNavBar Component', () => {
   it('renders the MobileNavBar component', () => {

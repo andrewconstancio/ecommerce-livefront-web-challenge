@@ -14,13 +14,13 @@ const ProductDetails = () => {
 	// get product fetched by id form the API and store it into a state variable
 	const [product, setProduct] = useState(null);
 
-	// state variable for when an errors occures when fetching data from the API
+	// state variable for when an errors occurs when fetching data from the API
 	const [error, setError] = useState(null);
 
 	// product added to cart counter state variable
 	const [productAddedCount, setProductAddedCount] = useState(0);
 
-  // fetch get product by id whenever this conponent renders. products state, loading state, and error state are set here
+  // fetch get product by id whenever this component renders. products state, loading state, and error state are set here
 	useEffect(() => {
 		async function fetchProduct() {
 			try {
@@ -65,7 +65,7 @@ const ProductDetails = () => {
 							className="product-details-main-image" 
 							loading="lazy" 
 							src={product.image} 
-							alt={`${product.title} image`}
+							alt={`${product.title}`}
 						/>
 					) : (
 						<Skeleton className="product-details-main-image" />
@@ -77,7 +77,7 @@ const ProductDetails = () => {
 					{product && product.category ? (
 						<span 
 							className="product-details-category" 
-							aria-label={`Product category ${product.category}`}
+							aria-label={`${product.category}`}
 						>
 							{product.category}
 						</span>
@@ -89,7 +89,7 @@ const ProductDetails = () => {
 					{product && product.title ? (
 						<span 
 							className="product-details-title"
-							aria-label={`Product title ${product.title}`}>
+							aria-label={`${product.title}`}>
 							{product.title}
 						</span>
 					) : (
@@ -100,18 +100,18 @@ const ProductDetails = () => {
 					{product && product.description ? (
 						<span 
 							className="product-details-description"
-							aria-label={`Product description ${product.description}`}>
+							aria-label={`${product.description}`}>
 							{product.description}
 						</span>
 					) : (
 						<Skeleton className="product-details-description" />
 					)}
 
-          {/* product price to the hundres decimal place */}
+          {/* product price to the hundreds decimal place */}
 					{product && product.price ? (
 						<span 
 							className="product-details-price"
-							aria-label={`Product price ${product.price.toFixed(2)}`}>
+							aria-label={`${product.price.toFixed(2)}`}>
 							$ {product.price.toFixed(2)}
 						</span>
 					) : (
@@ -132,5 +132,4 @@ const ProductDetails = () => {
 	)
 }
 
-// export default component
 export default ProductDetails;

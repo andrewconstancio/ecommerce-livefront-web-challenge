@@ -1,7 +1,7 @@
 /* @jest-environment jsdom */
 import React from 'react';
 import '@testing-library/jest-dom';
-import { render, screen, cleanup} from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ProductGrid from '../components/ProductGrid';
 import { MemoryRouter } from 'react-router-dom';
 
@@ -45,7 +45,7 @@ describe('Testing ProductGrid component', () => {
 		expect(screen.getByTestId('product-grid-loader-section-grid')).toBeInTheDocument();
 	});
 
-	it('renders nothing when producst are null', () => {
+	it('renders nothing when no products are passed by props', () => {
 		const { container } = render (
 			<ProductGrid products={null} />
 		);

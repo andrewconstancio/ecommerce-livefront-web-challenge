@@ -3,10 +3,10 @@ import React from 'react';
 import '@testing-library/jest-dom';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import NavLink from '../components/Navbar/Navlink';
+import NavLink from '../components/Navbar/NavLink';
 
 // mock of nav dropdown component
-jest.mock('../components/Navbar/Navdropdown', () => ({ _, dropdown, toggleDropdown }) => (
+jest.mock('../components/Navbar/NavDropDown', () => ({ _, dropdown, toggleDropdown }) => (
   <div>{dropdown ? 'Dropdown Open' : 'Dropdown Closed'}</div>
 ));
 

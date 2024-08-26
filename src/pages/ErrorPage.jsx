@@ -8,5 +8,4 @@ const ErrorPage = () => {
 	);
 }
 
-	// export default component
 export default ErrorPage;

@@ -10,5 +10,4 @@ const RouteNotFoundPage = () => {
   );
 }
 
-	// export default component
 export default RouteNotFoundPage;

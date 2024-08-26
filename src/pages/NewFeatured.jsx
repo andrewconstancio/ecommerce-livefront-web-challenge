@@ -8,5 +8,4 @@ const NewFeatured = () => {
 	);
 }
 
-	// export default component
 export default NewFeatured;
